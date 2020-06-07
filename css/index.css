@@ -2,11 +2,20 @@ html
 {
     scroll-behavior: smooth;
 }
+.navBar
+{
+  border-radius: 20px;
+  border-top-left-radius: 0;
+  border-top-right-radius: 0;
+  border: 3px solid whitesmoke;
+}
 ul
 {
  font-family: 'Baloo 2', cursive;
  width: 275px;
  margin: 0 auto;
+ border-radius: 15px;
+ border: 2px solid wheat;
 }
 li
 {

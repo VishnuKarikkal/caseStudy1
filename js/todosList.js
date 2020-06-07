@@ -35,13 +35,13 @@ function todosList()    //fetches the todos list from the online API
 
     document.getElementById('imgDiv').style.display='none';
     document.getElementById('todosData').scrollIntoView();
-    return false;
+    return false;       //to restrict the page from 'refresh'
 }
 
 function attachCheckBoxHandler()    //fired when any checkbox is -clicked or changed the checked state-
 {
    let numberOfSelected=0;  //to hold the number of completed todos
-   let todosList=document.getElementsByClassName('checkBox');   //fetching all checkboxes
+   let todosList=document.getElementsByClassName('checkBox');   //fetching all 'checkable' checkboxes
     for(let i=0;i<todosList.length;i++) //checking for 5 completed todos
     {
          if(todosList[i].checked)
@@ -50,11 +50,11 @@ function attachCheckBoxHandler()    //fired when any checkbox is -clicked or cha
             }
     }        
     let promise=new Promise(function(resolve)  //Promise that ensures alert at the right moment
-    {
-       if(numberOfSelected==5)
-       {
+                                {
+                                if(numberOfSelected==5)
+                                {
            resolve("Congrats! 5 Tasks Have been Successfully Completed!!!");
-       }
-    }); 
+                                }
+                                }); 
    return promise;  //returning promise
 }
