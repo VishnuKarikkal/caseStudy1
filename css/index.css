@@ -1,0 +1,61 @@
+html
+{
+    scroll-behavior: smooth;
+}
+ul
+{
+ font-family: 'Baloo 2', cursive;
+ width: 275px;
+ margin: 0 auto;
+}
+li
+{
+ float: left;
+ font-size: large;
+ margin-left: 10px;
+}
+a
+{
+ color: white !important;
+}
+a:hover
+{
+    color: black !important;
+    font-weight: bolder;
+}
+.custom-toggler.navbar-toggler {
+    /* border-color: rgb(255,102,203); */
+    border: 2px solid whitesmoke;
+}
+.custom-toggler .navbar-toggler-icon {
+  background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 32 32' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(9,55,244, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 8h24M4 16h24M4 24h24'/%3E%3C/svg%3E");
+}
+
+#todosData
+{
+border: 2px solid whitesmoke;
+border-radius: 15px; 
+font-family: 'Baloo 2', cursive;
+border-collapse: collapse;
+width: 100%;
+}
+#todosData td , #todosData th
+{
+  border: 1px solid whitesmoke;
+  padding: 8px;
+  color:blue;
+  font-size: 22px;
+}
+#todosData tr:hover
+{
+  background-color: hotpink;
+}
+#todosData td:hover
+{
+  color: white;
+}
+.checkBox
+{
+width: 25px;
+height: 25px;
+}
