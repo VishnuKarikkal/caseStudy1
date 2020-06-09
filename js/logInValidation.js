@@ -9,17 +9,23 @@ function validateLogIn(checkLoginCredentials)
   {
     console.log("username RegEx Passed!");
 
-    document.getElementById("inputUsernameHelp").textContent="looks good!";
-    document.getElementById("inputUsernameHelp").classList.remove('wrong');
-    document.getElementById("inputUsernameHelp").classList.add('good');
+    $('#inputUsernameHelp').text("looks good!");
+    //document.getElementById("inputUsernameHelp").textContent="looks good!";
+    $('#inputUsernameHelp').removeClass("wrong");
+    //document.getElementById("inputUsernameHelp").classList.remove('wrong');
+    $('#inputUsernameHelp').addClass("good");
+    //document.getElementById("inputUsernameHelp").classList.add('good');
   }
   else
   {
     flag=false;
 
-    document.getElementById("inputUsernameHelp").textContent="invalid!";
-    document.getElementById("inputUsernameHelp").classList.remove('good');
-    document.getElementById("inputUsernameHelp").classList.add('wrong');
+    $('#inputUsernameHelp').text("invalid!");
+    //document.getElementById("inputUsernameHelp").textContent="invalid!";
+    $('#inputUsernameHelp').removeClass('good');
+    //document.getElementById("inputUsernameHelp").classList.remove('good');
+    $('#inputUsernameHelp').addClass('wrong');
+    //document.getElementById("inputUsernameHelp").classList.add('wrong');
   }
   
   testElement=document.getElementById("inputPassword").value;
@@ -27,17 +33,23 @@ function validateLogIn(checkLoginCredentials)
   {
    console.log("password RegEx Passed!");
 
-   document.getElementById("inputPasswordHelp").textContent="looks good!";
-    document.getElementById("inputPasswordHelp").classList.remove('wrong');
-    document.getElementById("inputPasswordHelp").classList.add('good');
+    $('#inputPasswordHelp').text("looks good!");
+    //document.getElementById("inputPasswordHelp").textContent="looks good!";
+    $('#inputPasswordHelp').removeClass('wrong');
+    //document.getElementById("inputPasswordHelp").classList.remove('wrong');
+    $('#inputPasswordHelp').addClass('good');
+    //document.getElementById("inputPasswordHelp").classList.add('good');
   }
   else
   {
     flag=false;
 
-    document.getElementById("inputPasswordHelp").textContent="invalid!";
-    document.getElementById("inputPasswordHelp").classList.remove('good');
-    document.getElementById("inputPasswordHelp").classList.add('wrong');
+    $('#inputPasswordHelp').text("invalid!");
+    //document.getElementById("inputPasswordHelp").textContent="invalid!";
+    $('#inputPasswordHelp').removeClass('good');
+    //document.getElementById("inputPasswordHelp").classList.remove('good');
+    $('#inputPasswordHelp').addClass('wrong');
+    //document.getElementById("inputPasswordHelp").classList.add('wrong');
   }
 
  if(flag==true)
@@ -53,16 +65,22 @@ function checkLoginCredentials()
   let testPassword=document.getElementById("inputPassword").value;
   if((testPassword=='12345')&&(testUsername=='admin'))
   {
-    return true;
+    return true;    //window.location.href("index.html")
   }
   else
   {
-    document.getElementById("inputUsernameHelp").textContent="incorrect username or password!";
-    document.getElementById("inputPasswordHelp").textContent="incorrect username or password!";
-    document.getElementById("inputUsernameHelp").classList.remove('good');
-    document.getElementById("inputUsernameHelp").classList.add('wrong');
-    document.getElementById("inputPasswordHelp").classList.remove('good');
-    document.getElementById("inputPasswordHelp").classList.add('wrong');
+    $('#inputUsernameHelp').text("incorrect username or password!");
+    //document.getElementById("inputUsernameHelp").textContent="incorrect username or password!";
+    $('#inputPasswordHelp').text("incorrect username or password!");
+    //document.getElementById("inputPasswordHelp").textContent="incorrect username or password!";
+    $('#inputUsernameHelp').removeClass('good');
+    //document.getElementById("inputUsernameHelp").classList.remove('good');
+    $('#inputUsernameHelp').addClass('wrong');
+    //document.getElementById("inputUsernameHelp").classList.add('wrong');
+    $('#inputPasswordHelp').removeClass('good');
+    //document.getElementById("inputPasswordHelp").classList.remove('good');
+    $('#inputPasswordHelp').addClass('wrong');
+    //document.getElementById("inputPasswordHelp").classList.add('wrong');
     
     return false;
   }

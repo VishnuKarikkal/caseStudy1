@@ -27,13 +27,16 @@ function todosList()    //fetches the todos list from the online API
                                             }                           //also added resolve() that 'alerts' the user
  
                                          }
-                                         document.getElementById("todosData").innerHTML=table;
+                                         $('#todosData').html(table);
+                                         //document.getElementById("todosData").innerHTML=table;
                                     }
                                 }
     xhttp.open("GET","https://jsonplaceholder.typicode.com/todos",true);
     xhttp.send();
 
-    document.getElementById('imgDiv').style.display='none';
+    $("#imgDiv").hide();
+    //document.getElementById('imgDiv').style.display='none';
+    //$("#todosData").scrollIntoView();
     document.getElementById('todosData').scrollIntoView();
     return false;       //to restrict the page from 'refresh'
 }
